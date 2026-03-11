@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('GitHub Source Code') {
+            steps {
+                git 'https://github.com/Abhi-Rathod/Hostel_Managment.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'echo Build Started'
+            }
+        }
+
+        stage('Deploy Project') {
+            steps {
+                sh 'echo Deploy Successful'
+            }
+        }
+    }
+}
